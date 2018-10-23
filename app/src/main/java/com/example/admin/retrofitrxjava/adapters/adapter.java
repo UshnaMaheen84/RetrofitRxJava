@@ -72,6 +72,9 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
         holder.name.setText(object.getName());
         holder.category.setText(object.getCategory());
 
+
+        
+
         holder.holderView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
