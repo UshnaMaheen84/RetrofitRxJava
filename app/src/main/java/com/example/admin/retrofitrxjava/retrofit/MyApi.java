@@ -1,17 +1,11 @@
 package com.example.admin.retrofitrxjava.retrofit;
 
-import com.example.admin.retrofitrxjava.models.IconBetterIdea;
 import com.example.admin.retrofitrxjava.models.News;
 import com.example.admin.retrofitrxjava.models.headlineModel;
 
-import java.util.List;
-
 import io.reactivex.Observable;
-import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
-import retrofit2.http.Url;
 
 
 public interface MyApi {
@@ -23,8 +17,5 @@ public interface MyApi {
     @GET("top-headlines")
     Observable<headlineModel> getHeadline(@Query("sources") String source,
                                           @Query("apiKey") String apiKey);
-//
-//    @GET("icon?url=")
-//    Observable<IconBetterIdea> getIconUrl();
 
 }

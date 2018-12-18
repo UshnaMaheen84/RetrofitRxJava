@@ -74,7 +74,7 @@ public class Splash extends AppCompatActivity {
 
                         progressDialog.dismiss();
                         common.sources = news.getSources();
-                        Intent intent = new Intent(Splash.this, MainActivity.class);
+                        Intent intent = new Intent(Splash.this, Category.class);
                         startActivity(intent);
                         finish();
 
