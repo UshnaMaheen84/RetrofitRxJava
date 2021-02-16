@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.admin.retrofitrxjava.R;
@@ -44,6 +45,12 @@ public class headlineAdapter extends RecyclerView.Adapter<headlineAdapter.MyView
         holder.content.setText(object.getContent());
         holder.date.setText(object.getPublishedAt());
 
+        if(object.getDescription().isEmpty()){
+            holder.descriptionLayout.setVisibility(View.GONE);
+        }
+        if(object.getContent().isEmpty()){
+            holder.contentLayout.setVisibility(View.GONE);
+        }
         Picasso.get().load(object.getUrlToImage()).into(holder.imageView);
 
         holder.holderView.setOnClickListener(new View.OnClickListener() {
@@ -64,11 +71,14 @@ public class headlineAdapter extends RecyclerView.Adapter<headlineAdapter.MyView
         TextView auther, title, discription, date, content;
         View holderView;
         ImageView imageView;
+        LinearLayout descriptionLayout, contentLayout;
         public MyViewHolder(View view) {
             super(view);
 
             holderView = view;
             imageView= view.findViewById(R.id.image);
+            descriptionLayout= view.findViewById(R.id.descriptionLayout);
+            descriptionLayout= view.findViewById(R.id.contentLayout);
             auther = (TextView) view.findViewById(R.id.author);
             title = (TextView) view.findViewById(R.id.title);
             discription = (TextView) view.findViewById(R.id.description);

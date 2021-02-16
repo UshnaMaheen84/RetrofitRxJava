@@ -17,25 +17,14 @@
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:src="@drawable/icon" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Title: "
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
@@ -44,28 +33,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="title"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            >
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/author1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Author: "
-                android:textSize="18sp"
+                android:text="Title"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -75,23 +44,21 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:text="author"
-                android:textSize="18sp" />
-
-            >
+                android:textSize="20sp" />
         </LinearLayout>
 
+
         <LinearLayout
+            android:id="@+id/descriptionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/description1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -106,7 +73,6 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:text="description"
                 android:textSize="18sp" />
 
@@ -114,15 +80,15 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/contentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/content1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -137,7 +103,6 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:text="content"
                 android:textSize="18sp" />
 
@@ -151,18 +116,6 @@
 
 
             <TextView
-                android:id="@+id/published"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Date: "
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/publishedAt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -171,6 +124,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="date"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             >

@@ -28,10 +28,6 @@ public class Category extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //here call filter data
-                //jo common.sources mai sai un objects ko filter karygi jin ki category general hai
-                //then usko adapter mai bhejain
-
                 Intent intent = new Intent(Category.this, MainActivity.class);
                 intent.putExtra("Category", "general");
                 startActivity(intent);

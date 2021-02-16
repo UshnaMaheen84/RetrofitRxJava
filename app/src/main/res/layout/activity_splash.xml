@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/news"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".Splash">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:padding="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/icon" />
 </LinearLayout>

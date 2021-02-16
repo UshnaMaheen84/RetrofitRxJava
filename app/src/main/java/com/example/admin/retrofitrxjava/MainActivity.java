@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     public List<Source> filterData(){
 
+        //here call filter data
+        //jo common.sources mai sai un objects ko filter kary gi jin ki category general hai
+        //then usko adapter mai bhejain
+
         ArrayList<Source> generalArrayList = new ArrayList<>();
         for (int i =0; i<common.sources.size(); i++){
             if(common.sources.get(i).getCategory().equals(category))

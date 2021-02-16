@@ -42,13 +42,6 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
         final Source object = arrayList.get(position);
         String myCategory = object.getCategory();
         if (myCategory.equals(MainActivity.category)) {
-
-
-
-            Picasso.get().
-                    load("https://i.olsh.me/icon?size=80..120..200&url=" + object.getUrl())
-                    .into(holder.imageView);
-
             holder.name.setText(object.getName());
             holder.category.setText(object.getUrl());
             holder.discription.setText(object.getDescription());
@@ -84,7 +77,6 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
         CardView cardView;
         TextView name, category, discription;
         View holderView;
-        ImageView imageView;
 
         public MyViewHolder(View view) {
             super(view);
@@ -92,7 +84,6 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
             holderView = view;
             discription = view.findViewById(R.id.description);
             cardView = view.findViewById(R.id.cv);
-            imageView = view.findViewById(R.id.image);
             name = (TextView) view.findViewById(R.id.name);
             category = (TextView) view.findViewById(R.id.category);
         }
