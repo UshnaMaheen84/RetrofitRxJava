@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class Category extends AppCompatActivity {
 
-    ImageView general, sports, business, entertainment, health, science, technology;
+    ImageView general, sports, business, entertainment, health, technology;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,6 @@ public class Category extends AppCompatActivity {
         sports = findViewById(R.id.sportsNews);
         technology = findViewById(R.id.techNews);
         health = findViewById(R.id.healthNews);
-        science = findViewById(R.id.scienceNews);
         business = findViewById(R.id.businessNews);
 
         general.setOnClickListener(new View.OnClickListener() {
@@ -54,14 +53,6 @@ public class Category extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Category.this, MainActivity.class);
                 intent.putExtra("Category", "technology");
-                startActivity(intent);
-            }
-        });
-        science.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Category.this, MainActivity.class);
-                intent.putExtra("Category", "science");
                 startActivity(intent);
             }
         });

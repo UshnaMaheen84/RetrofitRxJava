@@ -45,12 +45,12 @@ public class headlineAdapter extends RecyclerView.Adapter<headlineAdapter.MyView
         holder.content.setText(object.getContent());
         holder.date.setText(object.getPublishedAt());
 
-        if(object.getDescription().isEmpty()){
-            holder.descriptionLayout.setVisibility(View.GONE);
-        }
-        if(object.getContent().isEmpty()){
-            holder.contentLayout.setVisibility(View.GONE);
-        }
+//        if(object.getDescription().isEmpty()){
+//            holder.descriptionLayout.setVisibility(View.GONE);
+//        }
+//        if(object.getContent().isEmpty()){
+//            holder.contentLayout.setVisibility(View.GONE);
+//        }
         Picasso.get().load(object.getUrlToImage()).into(holder.imageView);
 
         holder.holderView.setOnClickListener(new View.OnClickListener() {

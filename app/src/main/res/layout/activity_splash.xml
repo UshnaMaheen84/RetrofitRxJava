@@ -6,12 +6,56 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context=".Splash">
+    tools:context=".Splash"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:padding="100dp"
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/NetworkLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/icon" />
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:padding="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/icon" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/noNetworkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:gravity="center"
+            android:layout_margin="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="Unable to connect to Internet. Please check your network settings."/>
+
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:textAllCaps="false"
+            android:text="Retry"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
 </LinearLayout>
