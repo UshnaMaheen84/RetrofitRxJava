@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".headlines"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".headlines">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/NetworkLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Headlines"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        />
+        android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rview"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/noNetworkLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:gravity="center"
+            android:layout_margin="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="Unable to connect to Internet. Please check your network settings."/>
+
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:textAllCaps="false"
+            android:text="Retry"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
 
 </LinearLayout>

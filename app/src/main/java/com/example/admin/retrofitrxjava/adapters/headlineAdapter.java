@@ -43,14 +43,15 @@ public class headlineAdapter extends RecyclerView.Adapter<headlineAdapter.MyView
         holder.auther.setText(object.getAuthor());
         holder.discription.setText(object.getDescription());
         holder.content.setText(object.getContent());
-        holder.date.setText(object.getPublishedAt());
+        holder.date.setText(object.getPublishedAt().substring(0,10));
 
-//        if(object.getDescription().isEmpty()){
-//            holder.descriptionLayout.setVisibility(View.GONE);
-//        }
-//        if(object.getContent().isEmpty()){
-//            holder.contentLayout.setVisibility(View.GONE);
-//        }
+        if(object.getDescription() == null){
+            holder.descriptionLayout.setVisibility(View.GONE);
+        }
+        if(object.getContent() == null){
+            holder.contentLayout.setVisibility(View.GONE);
+        }
+
         Picasso.get().load(object.getUrlToImage()).into(holder.imageView);
 
         holder.holderView.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +79,7 @@ public class headlineAdapter extends RecyclerView.Adapter<headlineAdapter.MyView
             holderView = view;
             imageView= view.findViewById(R.id.image);
             descriptionLayout= view.findViewById(R.id.descriptionLayout);
-            descriptionLayout= view.findViewById(R.id.contentLayout);
+            contentLayout= view.findViewById(R.id.contentLayout);
             auther = (TextView) view.findViewById(R.id.author);
             title = (TextView) view.findViewById(R.id.title);
             discription = (TextView) view.findViewById(R.id.description);

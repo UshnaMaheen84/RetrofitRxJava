@@ -52,6 +52,29 @@ public class Splash extends AppCompatActivity {
                 if(haveNetwork()){
                     main_layout.setVisibility(View.VISIBLE);
                     noNetworkLayout.setVisibility(View.GONE);
+                    progressDialog.setMessage("Getting news");
+                    progressDialog.setTitle("Please wait..");
+                    progressDialog.show();
+
+                    Thread myThread = new Thread() {
+                        @Override
+                        public void run() {
+                            try {
+
+                                sleep(1000);
+                                try {
+                                    getData();
+                                } catch (Exception e) {
+                                    Log.e("ExceptionFromServer", e.getMessage());
+                                }
+
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    myThread.start();
+
                 }
                 else{
                     Toast.makeText(Splash.this, " Please get Online first. ", Toast.LENGTH_SHORT).show();
